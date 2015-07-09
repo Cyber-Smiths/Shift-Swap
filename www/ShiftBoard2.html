@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Cyber Swap</title>
+
+    <meta charset='utf-8' />
+
+    <link href="fullcalendar.css" rel="stylesheet" />
+    <link href="fullcalendar.print.css" rel="stylesheet" media="print" />
+    <link href="paylocity-citrus/dist/Content/citrus.core.css" rel="stylesheet" />
+    <link href="paylocity-citrus/scheduler-152/Content/styles.css" rel="stylesheet" />
+    <script src="fullcalendar-2.3.2/lib/jquery.min.js"></script>
+    <script src="fullcalendar-2.3.2/lib/moment.min.js"></script>
+    <script src="fullcalendar-2.3.2/fullcalendar.js"></script>
+    <script type='text/javascript'></script>
+
+    <script>
+    $(document).ready(function () {
+        $('#calendarTwo').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: ''
+            },
+            defaultView: "month",
+            editable: false,
+            eventClick: function (calEvent, jsEvent, view) {
+                $('#myModalPick').modal('toggle');
+                document.getElementById("confirmPick").addEventListener("click", pickUpShift, true);
+                function pickUpShift() {
+                    $.ajax
+                        ({
+                            type: 'POST',
+                            url: 'http://helloworld-db.azurewebsites.net/ASPX/pickUp.aspx/?boogers=2',
+                            data:
+                            {
+                                ShiftId: (calEvent.id)
+                            },
+                            success: function () {
+                                $('#calendarTwo').fullCalendar('refetchEvents');
+                            }
+                        });
+                    document.getElementById("confirmPick").removeEventListener("click", pickUpShift, true);
+                }
+            },
+            eventLimit: true, // allow "more" link when too many events
+            eventSources: [
+                {
+                    url: 'http://helloworld-db.azurewebsites.net/ASPX/ModalPopulator.aspx/?boogers=2',
+                    color: "#ff5511",
+                    textColor: "white"
+                }
+            ]
+
+        });
+    });
+    </script>
+
+    <style>
+        body {
+            margin: 40px 10px;
+            padding: 0;
+            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+            font-size: 14px;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body class="citrus">
+
+    <div id="calendarTwo"></div>
+
+    <div id="myModalPick" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content size-small">
+                <div class="modal-header">
+                    <h2>Pick Up?</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-delete size-medium"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        This shift will be added to your Schedule.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button id="confirmPick" type="button" class="button" data-dismiss="modal">Pick Up</button>
+                    <button type="button" class="button secondary outline" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form method="get" action="/cyberweb2.html">
+        <button class="button" type="submit">Your Schedule</button>
+    </form>
+
+    <!--Citrus Javascript-->
+    <script src="paylocity-citrus/dist/Scripts/citrus.modal.js"></script>
+    <script src="paylocity-citrus/dist/Scripts/citrus.functions.js"></script>
+    <script src="paylocity-citrus/dist/Scripts/libs/modernizr.js"></script>
+
+</body>
+
+</html>
