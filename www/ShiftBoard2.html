@@ -75,7 +75,11 @@
 
 <body class="citrus">
 
-    <div id="calendarTwo"></div>
+    <div id="calendarTwo">
+        <form method="get" action="http://helloworld-db.azurewebsites.net/cyberweb2.html">
+            <button class="button" type="submit">Your Schedule</button>
+        </form>
+    </div>
 
     <div id="myModalPick" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -96,9 +100,7 @@
             </div>
         </div>
     </div>
-    <form method="get" action="http://helloworld-db.azurewebsites.net/cyberweb2.html">
-        <button class="button" type="submit">Your Schedule</button>
-    </form>
+    
 
     <!--Citrus Javascript-->
     <script src="paylocity-citrus/dist/Scripts/citrus.modal.js"></script>
