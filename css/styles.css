@@ -1,0 +1,536 @@
+.citrus {
+  /***********************
+    Filter Styles: Advanced, Load, Save, Pillbox
+    ************************/
+  /**************************************************
+    --- Filter styles from WebTime Filter Prototype ---
+    ***************************************************/
+}
+.citrus .bounding-box,
+.citrus.bounding-box {
+  position: relative;
+  margin: 15px auto;
+  margin: 1.071rem auto;
+}
+.citrus .bounding-box.width-1280,
+.citrus.bounding-box.width-1280 {
+  box-sizing: border-box;
+  max-width: 1280px;
+  max-width: 91.429rem;
+  padding: 0 20px;
+  padding: 0 1.429rem;
+}
+@media screen and (max-width: 659px) {
+  .citrus .bounding-box.width-1280,
+  .citrus.bounding-box.width-1280 {
+    padding: 0 5px;
+    padding: 0 0.357rem;
+  }
+}
+.citrus .filters-body {
+  color: #222222;
+}
+.citrus #saved-search {
+  float: right;
+}
+.citrus .employee-search-controls {
+  margin-left: 15px;
+  margin-left: 1.071rem;
+}
+.citrus .employee-search-controls .form-group {
+  width: 175px;
+  width: 12.5rem;
+  margin-right: 5px;
+  margin-right: 0.357rem;
+  padding-bottom: 0;
+}
+.citrus .employee-search-controls .form-group input[type="text"] {
+  width: 175px;
+  width: 12.5rem;
+}
+.citrus #employee-search-filters {
+  clear: both;
+  padding: 15px 0;
+  padding: 1.071rem 0;
+  background: #dadada;
+  border: 1px solid #a6a6a6;
+  border-radius: 0px 2px 2px 2px;
+  /*for overlapping filter control*/
+  position: absolute;
+  top: 35px;
+  top: 2.5rem;
+}
+.citrus #employee-search-filters .unit {
+  float: left;
+  padding: 5px 15px;
+  padding: 0.357rem 1.071rem;
+  border-left: 2px solid #cccccc;
+}
+.citrus #employee-search-filters .unit > div,
+.citrus #employee-search-filters .unit select {
+  margin: 0 0 10px 0;
+  margin: 0 0 0.714rem 0;
+}
+.citrus #employee-search-filters .unit .filter-label {
+  display: block;
+  max-width: 180px;
+  max-width: 12.857rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.357rem;
+  color: #666666;
+}
+.citrus #employee-search-filters .unit input {
+  background: #ffffff;
+  border-radius: 2px;
+}
+.citrus #employee-search-filters .unit label {
+  display: block;
+  margin-bottom: 5px;
+  margin-bottom: 0.357rem;
+  color: #222222;
+}
+.citrus #employee-search-filters .unit .k-multiselect-wrap {
+  width: 175px;
+}
+.citrus #employee-search-filters .button-control {
+  clear: both;
+  margin-left: 15px;
+  margin-left: 1.071rem;
+}
+.citrus #employee-search-filters .unit:first-child {
+  border-left: none;
+}
+.citrus #employee-search-filters input[type="text"] {
+  min-height: 32px;
+  min-height: 2.286rem;
+}
+.citrus #saved-search-control {
+  clear: both;
+  padding: 15px;
+  padding: 1.071rem;
+  margin-bottom: 15px;
+  margin-bottom: 1.071rem;
+  background: #ffffff;
+}
+.citrus #saved-search-control ul {
+  margin: 0 0 15px 0;
+  margin: 0 0 1.071rem 0;
+  padding: 0;
+  list-style-type: none;
+}
+.citrus #saved-search-control li {
+  padding: 3px 5px;
+  padding: 0.214rem 0.357rem;
+}
+.citrus #saved-search-control li > span {
+  display: block;
+  float: left;
+  width: 150px;
+  width: 10.714rem;
+}
+.citrus #saved-search-control li:hover {
+  background: #dadada;
+}
+.citrus #saved-search-control li i {
+  font-size: 1em;
+  margin-right: 15px;
+  margin-right: 1.071rem;
+}
+.citrus input[type="search"],
+.citrus input[type="text"] {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  min-height: 18px;
+  min-height: 1.286rem;
+  padding: 2px;
+  padding: 0.143rem;
+}
+.citrus #search-control {
+  float: left;
+  padding: 0 0 15px 0;
+  padding: 0 0 1.071rem 0;
+  width: 100%;
+  /*for overlapping filter control*/
+  position: relative;
+  z-index: 1;
+}
+.citrus #search-control .filters-toggle {
+  display: block;
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+.citrus #search-control .filters-toggle i {
+  margin-left: 5px;
+  margin-left: 0.357rem;
+}
+.citrus #search-control .filters-toggle.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+.citrus #search-control .k-dropdown {
+  width: 185px;
+}
+.citrus #search-control .search-button-wrapper {
+  border-radius: 0px 2px 2px 0px;
+  border: 1px solid #a6a6a6;
+  border-left: none;
+  float: left;
+  padding: 3px;
+  padding: 0.214rem;
+  background: #ffffff;
+}
+.citrus .filter-footer {
+  clear: both;
+  text-align: justify;
+  width: 100%;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+  font-size: 0;
+}
+.citrus .filter-footer:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.citrus .filter-footer .pillbox-container {
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  line-height: 100%;
+  font-size: 14px;
+  font-size: 1rem;
+  margin: 6px 0 20px 0;
+  margin: 0.429rem 0 1.429rem 0;
+  padding: 0;
+  max-width: 900px;
+  max-width: 64.286rem;
+}
+@media screen and (max-width: 1279px) {
+  .citrus .filter-footer .pillbox-container {
+    max-width: 645px;
+    max-width: 46.071rem;
+  }
+}
+@media screen and (min-width: 860px) and (max-width: 1023px) {
+  .citrus .filter-footer .pillbox-container {
+    max-width: 495px;
+    max-width: 35.357rem;
+  }
+}
+.citrus .filter-footer .pillbox.filter-label {
+  cursor: default;
+  vertical-align: middle;
+}
+.citrus .filter-footer .save-search-controls {
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  font-size: 14px;
+  font-size: 1rem;
+}
+.citrus .filter-footer .save-search-controls input[type="text"] {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 8px 10px 7px 10px;
+  padding: 0.571rem 0.714rem 0.5rem 0.714rem;
+  width: 150px;
+  width: 10.714rem;
+}
+.citrus .filter-footer .save-search-controls .button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -4px;
+  margin-left: -0.286rem;
+}
+.citrus .filter-footer .save-search-controls .button:nth-child(3) {
+  display: inline-block;
+  margin-right: 0;
+  margin-left: 10px;
+  margin-left: 0.714rem;
+}
+.citrus .filter-footer .save-search-controls .form-group {
+  width: inherit;
+  margin-right: 15px;
+  margin-right: 1.071rem;
+}
+.citrus .filter-footer .pillbox {
+  display: inline-block;
+  padding: 4px 7px 4px 3px;
+  padding: 0.286rem 0.5rem 0.286rem 0.214rem;
+  margin-right: 5px;
+  margin-right: 0.357rem;
+  cursor: pointer;
+}
+.citrus .filter-footer .pillbox span {
+  vertical-align: middle;
+}
+.citrus .filter-footer .pillbox button {
+  font-size: 14px;
+  font-size: 1rem;
+}
+.citrus .filter-footer .pillbox:hover button {
+  color: #4bb1e6;
+  background: none;
+}
+.citrus .filter-footer .pillbox:hover span {
+  color: #4bb1e6;
+}
+.citrus .filter-footer .pillbox .xBtn {
+  display: inline-block;
+  margin: 0 3px 1px 0px;
+  margin: 0 0.214rem 0.071rem 0rem;
+  padding: 0;
+  border: 0;
+  line-height: 1;
+  letter-spacing: 0;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 100%;
+  background: none;
+}
+.citrus .k-content,
+.citrus .k-editable-area,
+.citrus .k-panelbar > li.k-item,
+.citrus .k-panel > li.k-item,
+.citrus .k-tiles {
+  background: inherit;
+}
+.citrus .scheduled-employee {
+  width: 300px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 6px;
+  margin-top: 0.429rem;
+}
+.citrus .scheduled-employee .employee-info {
+  float: left;
+}
+.citrus .scheduled-employee .employee-info .portrait {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px 8px 0 16px;
+  margin: 0.143rem 0.571rem 0 16px;
+  margin: 0.143rem 0.571rem 0 1.143rem;
+}
+.citrus .scheduled-employee .employee-info .name {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 175px;
+  max-width: 12.5rem;
+  white-space: pre-wrap;
+}
+.citrus .scheduled-employee .employee-info .name p {
+  line-height: 1.2;
+  margin: 0;
+}
+.citrus .scheduled-employee .employee-info .name p:first-child {
+  font-weight: bold;
+}
+.citrus .scheduled-employee .button {
+  float: right;
+}
+.citrus .timeline-scheduled-template,
+.citrus .pto-template,
+.citrus .previous-day-template,
+.citrus .actual-hours-template {
+  margin: 0;
+}
+.citrus .timeline-scheduled-template .event-info,
+.citrus .pto-template .event-info,
+.citrus .previous-day-template .event-info,
+.citrus .actual-hours-template .event-info {
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0 4px;
+  margin: 0 0 0 0.286rem;
+}
+.citrus .timeline-scheduled-template p,
+.citrus .pto-template p,
+.citrus .previous-day-template p,
+.citrus .actual-hours-template p {
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+.citrus .timeline-scheduled-template p:first-child,
+.citrus .pto-template p:first-child,
+.citrus .previous-day-template p:first-child,
+.citrus .actual-hours-template p:first-child {
+  font-weight: 600;
+}
+.citrus .timeline-scheduled-template,
+.citrus .pto-template {
+  padding: 8px 0 0 8px;
+  padding: 0.571rem 0 0 0.571rem;
+  height: 40px;
+  height: 2.857rem;
+}
+.citrus .timeline-scheduled-template {
+  background: #4bb1e6;
+  border-color: #4bb1e6;
+}
+.citrus .pto-template {
+  background: #a6a6a6;
+  border-color: #a6a6a6;
+}
+.citrus .previous-day-template {
+  padding: 2px 0 0 8px;
+  padding: 0.143rem 0 0 0.571rem;
+  height: 22px;
+  height: 1.571rem;
+  background: #666666;
+  border-color: #666666;
+}
+.citrus .actual-hours-template {
+  padding: 2px 0 0 8px;
+  padding: 0.143rem 0 0 0.571rem;
+  height: 22px;
+  height: 1.571rem;
+  background: #6cbc6b;
+  border-color: #6cbc6b;
+}
+.citrus .actual-hours-template.over {
+  background: #db6963;
+  border-color: #db6963;
+}
+.citrus .actual-hours-template.under {
+  background: #e1b825;
+  border-color: #e1b825;
+}
+.citrus .k-scheduler-weekview .event-timespan,
+.citrus .k-scheduler-weekview .event-laborlevels {
+  display: none;
+}
+.citrus .k-scheduler-weekview .timeline-scheduled-template,
+.citrus .k-scheduler-weekview .pto-template,
+.citrus .k-scheduler-weekview .previous-day-template,
+.citrus .k-scheduler-weekview .actual-hours-template {
+  padding: 8px 0 0 8px;
+  padding: 0.571rem 0 0 0.571rem;
+  height: 40px;
+  height: 2.857rem;
+}
+.citrus .k-scheduler-layout.k-scheduler-weekview .k-event {
+  margin: 8px;
+}
+.citrus .k-scheduler-layout.k-scheduler-weekview .actual-hours-template,
+.citrus .k-scheduler-layout.k-scheduler-weekview .previous-day-template {
+  height: 40px !important;
+}
+.citrus .k-scheduler-weekview .k-scheduler-table tr th[rowspan="1"]:nth-child(even) {
+  display: none;
+}
+.citrus .k-scheduler-timelineview .k-scheduler-table th,
+.citrus .k-scheduler-weekview .k-scheduler-table th {
+  padding: 2px 0;
+  padding: 0.143rem 0;
+  line-height: 1.2;
+  font-weight: normal;
+}
+.citrus .k-scheduler-timelineview .k-scheduler-table tr,
+.citrus .k-scheduler-weekview .k-scheduler-table tr {
+  height: 64px !important;
+}
+.citrus .k-scheduler-timelineview .k-scheduler-header-wrap .k-scheduler-table tr:nth-child(2),
+.citrus .k-scheduler-weekview .k-scheduler-header-wrap .k-scheduler-table tr:nth-child(2) {
+  height: 37px !important;
+}
+.citrus .k-scheduler-timelineview tr:first-child .k-scheduler-times tr:nth-child(2),
+.citrus .k-scheduler-weekview tr:first-child .k-scheduler-times tr:nth-child(2) {
+  height: 37px !important;
+}
+.citrus .k-scheduler-timelineview tr td .k-scheduler-content .k-event,
+.citrus .k-scheduler-weekview tr td .k-scheduler-content .k-event {
+  height: auto !important;
+}
+.citrus .k-scheduler-weekview .k-scheduler-header-wrap .k-scheduler-table tr:first-child {
+  height: 37px !important;
+}
+.citrus .k-scheduler-weekview tr:first-child .k-scheduler-times tr:first-child {
+  height: 37px !important;
+}
+.citrus .k-scheduler-timelineview .k-scheduler-header-wrap .k-scheduler-table tr:first-child {
+  display: none;
+}
+.citrus .k-scheduler-timelineview tr:first-child .k-scheduler-times tr:first-child {
+  display: none;
+}
+.citrus .k-tooltip {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  width: 14.286rem;
+}
+.citrus .k-callout {
+  border-width: 11px;
+}
+.citrus .k-callout-s:after,
+.citrus .k-callout-n:after,
+.citrus .k-callout-w:after,
+.citrus .k-callout-e:after {
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  border: solid transparent;
+  border-width: 12px;
+}
+.citrus .k-callout-s {
+  top: 100%;
+  margin-left: -10px;
+  border-top-color: #ffffff;
+}
+.citrus .k-callout-s:after {
+  top: 100%;
+  margin-left: -12px;
+  margin-top: -11px;
+  border-top-color: #cccccc;
+}
+.citrus .k-callout-n {
+  margin-top: -9px;
+  margin-left: -10px;
+  border-bottom-color: #ffffff;
+}
+.citrus .k-callout-n:after {
+  margin-left: -12px;
+  margin-top: -13px;
+  border-bottom-color: #cccccc;
+}
+.citrus .k-callout-e {
+  margin-top: -9px;
+  margin-right: -9px;
+  border-left-color: #ffffff;
+}
+.citrus .k-callout-e:after {
+  margin-top: -12px;
+  margin-left: -11px;
+  border-left-color: #cccccc;
+}
+.citrus .k-callout-w {
+  margin-top: -9px;
+  margin-left: -9px;
+  border-right-color: #ffffff;
+}
+.citrus .k-callout-w:after {
+  margin-top: -12px;
+  margin-left: -13px;
+  border-right-color: #cccccc;
+}

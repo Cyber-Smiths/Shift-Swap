@@ -1,10 +1,10 @@
-﻿$(document).ready(function () {
+$(document).ready(function(){
     if ($.fn.placeholder) {
-        $('input, textarea').placeholder();
+    	$('input, textarea').placeholder();
     }
     if (!Modernizr.svg) {
         $(".paylocity-logo a").css("background-image", "url(Content/Images/paylocity-logo-sm.png)");
-        (function () {
+        (function() {
             var e = document.getElementsByTagName("img"),
                 t = /.*\.svg$/,
                 n = 0,
@@ -18,3 +18,4 @@
     }
 });
 
+/* //@prepros-append */
