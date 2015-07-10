@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-
+    
     <title>Cyber Swap</title>
-
+    
     <meta charset='utf-8' />
-
+    
     <link href="css/fullcalendar.css" rel="stylesheet" />
     <link href="css/fullcalendar.print.css" rel="stylesheet" media="print" />
     <link href="css/citrus.css" rel="stylesheet" />
@@ -13,8 +13,8 @@
     <script src="js/jquery.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/fullcalendar.js"></script>
-
-
+    
+    
     <script>
         $(document).ready(function() {
             $('#calendar').fullCalendar({
@@ -34,7 +34,7 @@
                             ({
                                 type: 'POST',
                                 url: 'http://helloworld-db.azurewebsites.net/ASPX/giveShift.aspx',
-                                data:
+                                data: 
                                 {
                                     ShiftId: (calEvent.id)
                                 },
@@ -48,24 +48,24 @@
                 eventLimit: true, // allow "more" link when too many events
                 eventSources: [
                     {
-                        url: 'http://helloworld-db.azurewebsites.net/ASPX/CyberGeeksws.aspx/?boogers=2',
+                        url: 'http://helloworld-db.azurewebsites.net/ASPX/CyberGeeksws.aspx/?boogers=1',
                         color: "#4bb1e6",
                         textColor: "white"
                     },
                     {
-                        url: 'http://helloworld-db.azurewebsites.net/ASPX/myAvailableShifts.aspx/?boogers=2',
+                        url: 'http://helloworld-db.azurewebsites.net/ASPX/myAvailableShifts.aspx/?boogers=1',
                         color: "#4bb1e6",
                         borderColor: "#ff5511",
                         textColor: "#ff5511"
                     }
                  ]
-
+                        
             });
-
+            
         });
     </script>
 
-
+  
 
     <style>
         body {
@@ -79,49 +79,48 @@
             max-width: 900px;
             margin: 0 auto;
         }
-    </style>
-
+   </style>
+        
 </head>
-
+    
 <body class="citrus">
+    
+        <div id="calendar"></div>
+		<form method="get" action="ShiftBoard.html">
+                <button class="button" type="submit">Shift Board</button>
+            </form>
 
-<div id="calendar">
-        <form method="get" action="ShiftBoard2.html">
-            <button class="button" type="submit">Shift Board</button>
-        </form>
+            <form method="get" action="index.html">
+                <button class="button" type="submit">Log Out</button>
+            </form>
+       
+        
 
-        <form method="get" action="index.html">
-            <button class="button" type="submit">Log Out</button>
-        </form>
-</div>
+                       
+       <div id="myModalPrompt" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-dialog">
+               <div class="modal-content size-small">
+                   <div class="modal-header">
+                       <h2>Give Away Shift?</h2>
+                       <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-delete size-medium"></i></button>
+                   </div>
+                   <div class="modal-body">
+                       <p>
+                           This shift will be added to the Shift Board.
+                       </p>
+                   </div>
+                   <div class="modal-footer">
+                       <button id="confirmGive" type="button" class="button" data-dismiss="modal">Give Away</button>
+                       <button type="button" class="button secondary outline" data-dismiss="modal">Cancel</button>
+                   </div>
+               </div>
+           </div>
+       </div>
 
-
-
-
-    <div id="myModalPrompt" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content size-small">
-                <div class="modal-header">
-                    <h2>Give Away Shift?</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-delete size-medium"></i></button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        This shift will be added to the Shift Board.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button id="confirmGive" type="button" class="button" data-dismiss="modal">Give Away</button>
-                    <button type="button" class="button secondary outline" data-dismiss="modal">Cancel</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
 
-
-
-    <!--Citrus Javascript-->
+     <!--Citrus Javascript-->      
     <script src="js/Modal.js"></script>
     <script src="js/Functions.js"></script>
     <script src="js/modernizr.js"></script>

@@ -5,7 +5,7 @@
     <title>Cyber Swap</title>
 
     <meta charset='utf-8' />
-	 
+
     <link href="css/fullcalendar.css" rel="stylesheet" />
     <link href="css/fullcalendar.print.css" rel="stylesheet" media="print" />
     <link href="css/citrus.css" rel="stylesheet" />
@@ -13,6 +13,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/fullcalendar.js"></script>
+    
 
     <script>
     $(document).ready(function () {
@@ -31,7 +32,7 @@
                     $.ajax
                         ({
                             type: 'POST',
-                            url: 'http://helloworld-db.azurewebsites.net/ASPX/pickUp.aspx/?boogers=2',
+                            url: 'http://helloworld-db.azurewebsites.net/ASPX/pickUp.aspx/?boogers=1',
                             data:
                             {
                                 ShiftId: (calEvent.id)
@@ -46,7 +47,7 @@
             eventLimit: true, // allow "more" link when too many events
             eventSources: [
                 {
-                    url: 'http://helloworld-db.azurewebsites.net/ASPX/ModalPopulator.aspx/?boogers=2',
+                    url: 'http://helloworld-db.azurewebsites.net/ASPX/ModalPopulator.aspx/?boogers=1',
                     color: "#ff5511",
                     textColor: "white"
                 }
@@ -74,11 +75,10 @@
 
 <body class="citrus">
 
-    <div id="calendarTwo">
-        <form method="get" action="CyberWeb2.html">
+    <div id="calendarTwo"></div>
+	<form method="get" action="CyberWeb.html">
             <button class="button" type="submit">Your Schedule</button>
         </form>
-    </div>
 
     <div id="myModalPick" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
